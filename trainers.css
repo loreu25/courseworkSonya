@@ -1,0 +1,237 @@
+.trainers-main {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  position: relative;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainers-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.trainers-blob {
+  position: absolute;
+  background: url("assets/img/Union.svg") no-repeat center / contain;
+  width: 610px;
+  height: 361px;
+  filter: drop-shadow(0 0 0 #ffcc00);
+}
+
+.blob-1 {
+  left: -146px;
+  top: 1559px;
+  transform: rotate(10.3deg);
+}
+
+.blob-2 {
+  left: -4px;
+  top: 3953px;
+  width: 721px;
+  height: 361px;
+  transform: rotate(10.3deg);
+}
+
+.blob-3 {
+  left: 932px;
+  top: 3130px;
+  width: 510px;
+  height: 420px;
+  transform: rotate(80.22deg);
+}
+
+.blob-4 {
+  left: 183px;
+  top: 2569px;
+  width: 510px;
+  height: 420px;
+  transform: rotate(-21.01deg);
+}
+
+.trainers-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.trainers-hero {
+  width: 100%;
+}
+
+.trainers-hero-frame {
+  width: 1280px;
+  height: 720px;
+  border: 15px solid var(--dark);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.trainers-hero-content {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  width: 1210px;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  gap: 97px;
+}
+
+.trainers-hero-text {
+  width: 463px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.trainers-hero-text h1 {
+  margin: 0;
+  font-family: var(--headline-font);
+  font-size: 140px;
+  line-height: 140px;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+.trainers-hero-text p {
+  margin: 0;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: -0.05em;
+  color: var(--dark);
+}
+
+.trainers-hero-photo {
+  width: 650px;
+  height: 720px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.trainers-grid {
+  width: 1084px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.trainer-card {
+  width: 492px;
+  min-height: 838px;
+  height: auto;
+  background: var(--dark);
+  border-radius: 30px;
+  padding: 40px 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.trainer-photo {
+  width: 412px;
+  height: 440px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.trainer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1;
+}
+
+.trainer-name {
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.trainer-line {
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.trainer-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.trainer-chip {
+  flex: 1;
+  height: 42px;
+  border-radius: 20px;
+  border: 2px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+}
+
+.trainer-chip-wide {
+  flex: none;
+  width: 412px;
+}
+
+@media (max-width: 1280px) {
+  .trainers-hero-frame,
+  .trainers-hero-content,
+  .trainers-hero {
+    width: 100%;
+  }
+
+  .trainers-hero-content {
+    position: static;
+    padding: 0 40px;
+    height: auto;
+  }
+
+  .trainers-hero-frame {
+    height: auto;
+  }
+
+  .trainers-hero-photo {
+    height: 520px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .trainers-grid {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .trainer-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .trainer-photo {
+    width: 100%;
+    height: 360px;
+  }
+
+  .trainer-chip-wide {
+    width: 100%;
+  }
+}

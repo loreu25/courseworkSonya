@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Тренеры - Ace Tennis Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="trainers.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="header-left">
+          <a class="logo" href="index.html" aria-label="Ace Tennis Academy">
+            <span class="logo-mark">
+              <img src="assets/img/logo-circle.svg" alt="" />
+              <img src="assets/img/logo-lines.svg" alt="" />
+            </span>
+            <span class="logo-text">Ace tennis</span>
+          </a>
+          <nav class="header-nav">
+            <a href="about.html">О нас</a>
+            <a href="index.html#schedule">Расписание и цены</a>
+            <a href="trainers.html">Тренеры</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <div class="header-phone">+7 (987) 999 99 99</div>
+          <button
+            class="burger"
+            type="button"
+            aria-label="Открыть меню"
+            data-menu-open
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="menu-overlay" data-menu-overlay aria-hidden="true">
+        <div class="menu-panel" role="dialog" aria-modal="true">
+          <button class="menu-close" type="button" aria-label="Закрыть меню" data-menu-close></button>
+          <nav class="menu-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <button class="menu-link" type="button" data-menu-schedule>
+              Расписание и цены
+            </button>
+            <a href="trainers.html">Тренеры</a>
+            <a href="#certificates">Сертификаты</a>
+          </nav>
+          <div class="menu-schedule" data-menu-schedule-panel aria-hidden="true">
+            <a href="index.html#contacts">Пушкинская</a>
+            <a href="index.html#contacts">Тимирязевская</a>
+            <a href="index.html#contacts">Косино</a>
+            <a href="index.html#contacts">Лухмановская</a>
+          </div>
+          <div class="menu-contacts">
+            <div class="menu-phone">+7 (987) 999 99 99</div>
+            <div class="menu-icons">
+              <img src="assets/img/menu-icons.svg" alt="" />
+            </div>
+          </div>
+          <button class="btn menu-cta" type="button">Оставить заявку</button>
+        </div>
+      </div>
+
+      <main class="trainers-main">
+        <div class="trainers-decor">
+          <div class="trainers-blob blob-1"></div>
+          <div class="trainers-blob blob-2"></div>
+          <div class="trainers-blob blob-3"></div>
+          <div class="trainers-blob blob-4"></div>
+        </div>
+
+        <div class="trainers-content">
+          <section class="trainers-hero">
+            <div class="trainers-hero-frame">
+              <div class="trainers-hero-content">
+                <div class="trainers-hero-text">
+                  <h1>Наши тренеры</h1>
+                  <p>
+                    Профессиональная команда, которая поможет вам полюбить
+                    теннис и достичь своих целей
+                  </p>
+                </div>
+                <img
+                  class="trainers-hero-photo"
+                  src="assets/img/Rectangle 4335.png"
+                  alt="Тренеры на корте"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="trainers-grid">
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0.png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Пушкинская</button>
+                <button class="trainer-chip" type="button">Тимирязевская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_Srmly0300Ic.png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Косино</button>
+                <button class="trainer-chip" type="button">Тимирязевская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (1).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Косино</button>
+                <button class="trainer-chip" type="button">Лухмановская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (2).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Косино</button>
+                <button class="trainer-chip" type="button">Тимирязевская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (3).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Тимирязевская</button>
+                <button class="trainer-chip" type="button">Косино</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (4).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Косино</button>
+                <button class="trainer-chip" type="button">Лухмановская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (5).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip" type="button">Косино</button>
+                <button class="trainer-chip" type="button">Пушкинская</button>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <img
+                class="trainer-photo"
+                src="assets/img/unsplash_ofaBcg1xZL0 (6).png"
+                alt="Александр Воронов"
+              />
+              <div class="trainer-info">
+                <div class="trainer-name">Александр Воронов</div>
+                <div class="trainer-line">
+                  Специализация: Основатель академии, тренер высшей категории
+                </div>
+                <div class="trainer-line">Стаж: 12 лет</div>
+                <div class="trainer-line">
+                  Достижения: Мастер спорта, финалист чемпионата Москвы
+                </div>
+              </div>
+              <div class="trainer-actions">
+                <button class="trainer-chip trainer-chip-wide" type="button">
+                  Лухмановская
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <section class="cta">
+            <div class="cta-content">
+              <div class="cta-text">
+                <h2>Выходите на корт</h2>
+                <p>
+                  Первый шаг к большой игре — это просто. Заполните форму, и мы
+                  свяжемся с вами.
+                </p>
+              </div>
+              <form class="cta-form">
+                <label>
+                  <span>Имя</span>
+                  <input type="text" placeholder="" />
+                </label>
+                <label>
+                  <span>Номер телефона</span>
+                  <input type="tel" placeholder="" />
+                </label>
+                <button class="btn" type="submit">Оставить заявку</button>
+              </form>
+            </div>
+            <div class="cta-logo"></div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-left">
+          <div class="footer-icons">
+            <img src="assets/img/footer-logo.svg" alt="Контакты" />
+          </div>
+          <nav class="footer-nav">
+            <a href="about.html">О нас</a>
+            <a href="index.html#contacts">Пушкинская</a>
+            <a href="index.html#contacts">Тимирязевская</a>
+            <a href="index.html#contacts">Лухмановская</a>
+            <a href="index.html#contacts">Косино</a>
+            <a href="trainers.html">Тренеры</a>
+          </nav>
+        </div>
+        <div class="footer-right">
+          <div>Блог</div>
+          <div>Договор-оферта</div>
+          <div>Политика конфиденциальности</div>
+        </div>
+      </footer>
+    </div>
+    <script src="menu.js"></script>
+  </body>
+</html>
