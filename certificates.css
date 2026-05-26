@@ -77,6 +77,28 @@
   letter-spacing: -0.05em;
 }
 
+.certificates-faq .faq-answer {
+  display: none;
+  margin: 14px 0 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+  color: var(--dark);
+  max-width: 920px;
+}
+
+.certificates-faq .faq-item img {
+  transition: transform 0.2s ease;
+}
+
+.certificates-faq .faq-item.is-open .faq-answer {
+  display: block;
+}
+
+.certificates-faq .faq-item.is-open img {
+  transform: rotate(45deg);
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -252,6 +274,11 @@ body.modal-open {
 
   .certificates-button {
     width: 100%;
+  }
+
+  .certificates-faq .faq-answer {
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .modal-window {

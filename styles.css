@@ -527,24 +527,14 @@ img {
 .mask-small {
   width: 270px;
   height: 213px;
-  -webkit-mask-image: url("assets/img/mask-small.svg");
-  mask-image: url("assets/img/mask-small.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-size: cover;
+  border-radius: 18px;
 }
 
 .mask-large {
   flex: 1;
   min-width: 420px;
   height: 529px;
-  -webkit-mask-image: url("assets/img/mask-large.svg");
-  mask-image: url("assets/img/mask-large.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-size: cover;
+  border-radius: 26px;
 }
 
 .belief {
@@ -900,6 +890,25 @@ img {
 .faq-item img {
   width: 27px;
   height: 27px;
+  transition: transform 0.2s ease;
+}
+
+.faq-answer {
+  display: none;
+  margin: 14px 0 0;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+  color: var(--dark);
+  max-width: 900px;
+}
+
+.faq-item.is-open .faq-answer {
+  display: block;
+}
+
+.faq-item.is-open img {
+  transform: rotate(45deg);
 }
 
 .faq-line {
@@ -1298,6 +1307,22 @@ body.request-modal-open {
     font-size: 20px;
   }
 
+  .facts {
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .fact {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .fact-text {
+    max-width: 260px;
+  }
+
   .about h2,
   .locations h2,
   .reviews-card h2,
@@ -1330,6 +1355,11 @@ body.request-modal-open {
     font-size: 20px;
   }
 
+  .faq-answer {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   .contact-title {
     font-size: 22px;
   }
@@ -1341,6 +1371,43 @@ body.request-modal-open {
   .footer-nav,
   .footer-right {
     font-size: 18px;
+  }
+
+  .site-footer {
+    height: auto;
+    padding: 32px 20px 40px;
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .footer-left {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .footer-icons {
+    gap: 12px;
+  }
+
+  .footer-icons img {
+    width: 100px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .footer-nav {
+    width: 100%;
+    gap: 14px 22px;
+    line-height: 1.2;
+  }
+
+  .footer-right {
+    width: 100%;
+    gap: 14px;
+    text-align: left;
+    color: #b8b8b8;
   }
 
   .request-modal__window h2 {
@@ -1410,6 +1477,24 @@ body.request-modal-open {
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+    position: relative;
+  }
+
+  .about-images::after {
+    content: "";
+    position: absolute;
+    right: -22px;
+    top: -8px;
+    width: 230px;
+    height: 170px;
+    background: url("assets/img/Union.svg") no-repeat center / contain;
+    z-index: -1;
+  }
+
+  .mask-image {
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 18px;
   }
 
   .mask-small {
@@ -1434,10 +1519,18 @@ body.request-modal-open {
     top: 0;
     width: 100%;
     height: 100vh;
-    padding: 20px;
+    padding: 60px 20px 24px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 70;
+    gap: 28px;
+    overflow-y: auto;
+  }
+
+  .menu-close {
+    left: auto;
+    right: 20px;
+    top: 20px;
   }
 
   .menu-open .menu-panel {
@@ -1447,11 +1540,14 @@ body.request-modal-open {
   .menu-links {
     align-items: flex-start;
     width: 100%;
+    margin-top: 10px;
+    gap: 22px;
   }
 
   .menu-links a,
   .menu-link {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: left;
     align-self: stretch;
   }
@@ -1464,9 +1560,10 @@ body.request-modal-open {
     height: auto;
     background: transparent;
     border-radius: 0;
-    padding: 30px 0 0 0;
-    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    margin: 10px 0 0 0;
     border-top: 1px solid var(--dark);
+    gap: 16px;
   }
 
   .menu-schedule a {
@@ -1478,6 +1575,7 @@ body.request-modal-open {
   .menu-contacts {
     width: 100%;
     align-items: flex-start;
+    gap: 18px;
   }
 
   .menu-phone {
@@ -1486,5 +1584,6 @@ body.request-modal-open {
 
   .menu-cta {
     width: 100%;
+    margin-top: 6px;
   }
 }

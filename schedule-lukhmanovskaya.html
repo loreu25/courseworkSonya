@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="schedule.css" />
 	</head>
-	<body>
+	<body data-schedule-location="Лухмановская">
 		<div class="page">
 			<header class="site-header">
 				<div class="header-left">
@@ -236,7 +236,9 @@
 									<span class="slot-meta-item">
 										<span class="icon icon-group"></span> 6 человек
 									</span>
-									<span class="icon icon-price"></span> 3000р
+									<span class="slot-meta-item">
+										<span class="icon icon-price"></span> 3000р
+									</span>
 								</div>
 								<button class="slot-btn" type="button">Записаться</button>
 							</div>
@@ -346,6 +348,7 @@
 										<span class="icon icon-price"></span> 3000р
 									</span>
 								</div>
+								<button class="slot-btn" type="button">Записаться</button>
 							</div>
 							<div class="slot-card slot-card-tall">
 								<div class="slot-meta">
@@ -360,6 +363,7 @@
 										<span class="icon icon-price"></span> 3000р
 									</span>
 								</div>
+								<button class="slot-btn" type="button">Записаться</button>
 							</div>
 						</div>
 						<div class="slot-row">
@@ -407,6 +411,77 @@
 				</template>
 			</main>
 
+			<div class="request-modal request-modal--schedule" data-request-form-modal aria-hidden="true">
+				<div
+					class="request-modal__window request-modal__window--schedule"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="request-schedule-title"
+				>
+					<button
+						class="request-modal__close"
+						type="button"
+						aria-label="Закрыть"
+						data-request-form-close
+					></button>
+					<div class="request-modal__content request-modal__content--schedule">
+						<h2 id="request-schedule-title">Ace Tennis Academy</h2>
+						<div class="request-schedule">
+							<div class="request-schedule-row">
+								<span class="request-schedule-label">Дата</span>
+								<div class="request-schedule-value">
+									<span data-schedule-day>Понедельник</span>
+									<span data-schedule-time>12:00 - 13:30</span>
+								</div>
+							</div>
+							<div class="request-schedule-divider"></div>
+							<div class="request-schedule-row">
+								<span class="request-schedule-label">Тренер</span>
+								<div class="request-schedule-value">
+									<span data-schedule-trainer>Светлана Ходакова</span>
+								</div>
+							</div>
+							<div class="request-schedule-divider"></div>
+							<div class="request-schedule-row">
+								<span class="request-schedule-label">Локация</span>
+								<div class="request-schedule-value">
+									<span data-schedule-location>Лухмановская</span>
+								</div>
+							</div>
+							<div class="request-schedule-divider"></div>
+						</div>
+						<form class="request-form request-form--schedule" data-request-form>
+							<input type="text" name="name" placeholder="Имя" />
+							<input type="tel" name="phone" placeholder="Номер телефона" />
+							<label class="request-consent">
+								<input type="checkbox" name="consent" />
+								<span>Согласие на обработку персональных данных</span>
+							</label>
+							<button class="btn request-submit request-submit--schedule" type="submit">
+								Записаться
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="request-modal" data-request-success aria-hidden="true">
+				<div
+					class="request-modal__window request-modal__window--success"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="request-success-title"
+				>
+					<button
+						class="request-modal__close"
+						type="button"
+						aria-label="Закрыть"
+						data-request-success-close
+					></button>
+					<h2 id="request-success-title">Заявка отправлена</h2>
+				</div>
+			</div>
+
 			<footer class="site-footer">
 				<div class="footer-left">
 					<div class="footer-icons">
@@ -429,6 +504,7 @@
 			</footer>
 		</div>
 		<script src="menu.js"></script>
+		<script src="request.js"></script>
 		<script src="schedule.js"></script>
 	</body>
 </html>

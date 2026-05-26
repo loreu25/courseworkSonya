@@ -116,3 +116,17 @@ if (headerScheduleToggle && headerSchedulePanel) {
     }
   });
 }
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const button = item.querySelector("button");
+  if (!button || button.dataset.faqBound === "true") {
+    return;
+  }
+
+  button.dataset.faqBound = "true";
+  button.setAttribute("aria-expanded", "false");
+  button.addEventListener("click", () => {
+    const isOpen = item.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", isOpen.toString());
+  });
+});
