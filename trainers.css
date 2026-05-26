@@ -305,27 +305,137 @@ body.request-modal-open {
 }
 
 @media (max-width: 1024px) {
+  .trainers-hero-frame,
+  .trainers-hero-content,
+  .trainers-hero {
+    width: 100%;
+  }
+
+  .trainers-hero-content {
+    position: static;
+    padding: 0 40px;
+    height: auto;
+  }
+
+  .trainers-hero-frame {
+    height: auto;
+  }
+
+  .trainers-hero-photo {
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-main {
+    padding-top: 60px;
+  }
+
+  .trainers-content {
+    gap: 60px;
+  }
+
+  .trainers-hero-frame {
+    width: 100%;
+    height: auto;
+    border: 8px solid var(--dark);
+    border-radius: 16px;
+    padding: 0;
+  }
+
+  .trainers-hero-content {
+    position: relative;
+    flex-direction: column-reverse;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .trainers-hero-text {
+    width: 100%;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .trainers-hero-text h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .trainers-hero-text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .trainers-hero-photo {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+  }
+
   .trainers-grid {
     width: 100%;
-    padding: 0 24px;
+    gap: 40px;
+    padding: 0 16px;
+    flex-direction: column;
   }
 
   .trainer-card {
     width: 100%;
-    height: auto;
+    min-height: auto;
+    padding: 24px;
+    gap: 20px;
   }
 
   .trainer-photo {
     width: 100%;
-    height: 360px;
+    height: 280px;
+    border-radius: 12px;
+  }
+
+  .trainer-info {
+    gap: 12px;
+  }
+
+  .trainer-name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .trainer-line {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .trainer-actions {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .trainer-chip {
+    font-size: 14px;
+    line-height: 18px;
+    height: 36px;
+    border-radius: 16px;
+    flex: 1 1 calc(50% - 6px);
+    min-width: 120px;
   }
 
   .trainer-chip-wide {
-    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .request-modal__window {
+    padding: 32px 24px;
   }
 
   .request-modal__window h2 {
-    font-size: 44px;
-    line-height: 46px;
+    font-size: 32px;
+    line-height: 36px;
   }
 }
