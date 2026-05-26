@@ -666,9 +666,6 @@ img {
   height: 46px;
 }
 
-.slider-arrow:first-child img {
-  transform: rotate(180deg);
-}
 
 .reviews-grid {
   display: grid;
