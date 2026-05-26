@@ -173,6 +173,7 @@
 .trainer-actions {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .trainer-chip {
@@ -186,11 +187,99 @@
   line-height: 23px;
   letter-spacing: -0.05em;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.trainer-chip:hover {
+  background: var(--yellow);
+  color: var(--dark);
+  border-color: var(--yellow);
 }
 
 .trainer-chip-wide {
   flex: none;
   width: 412px;
+}
+
+.request-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 30;
+  padding: 24px;
+}
+
+.request-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.request-modal__window {
+  position: relative;
+  width: min(580px, 100%);
+  min-height: 395px;
+  background: var(--bg);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.request-modal__window h2 {
+  margin: 0;
+  font-family: var(--headline-font);
+  font-size: 61px;
+  line-height: 61px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.request-modal__close {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.request-modal__close::before,
+.request-modal__close::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  background: var(--dark);
+  transform-origin: center;
+}
+
+.request-modal__close::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.request-modal__close::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+body.request-modal-open {
+  overflow: hidden;
 }
 
 @media (max-width: 1280px) {
@@ -233,5 +322,10 @@
 
   .trainer-chip-wide {
     width: 100%;
+  }
+
+  .request-modal__window h2 {
+    font-size: 44px;
+    line-height: 46px;
   }
 }

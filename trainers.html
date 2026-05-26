@@ -26,7 +26,25 @@
           </a>
           <nav class="header-nav">
             <a href="about.html">О нас</a>
-            <a href="schedule-pushkinskaya.html">Расписание и цены</a>
+            <div class="header-schedule-wrap">
+              <button
+                class="header-schedule"
+                type="button"
+                data-header-schedule
+              >
+                Расписание и цены
+              </button>
+              <div
+                class="header-schedule-panel"
+                data-header-schedule-panel
+                aria-hidden="true"
+              >
+                <a href="schedule-pushkinskaya.html">Пушкинская</a>
+                <a href="schedule-timiryazevskaya.html">Тимирязевская</a>
+                <a href="schedule-kosino.html">Косино</a>
+                <a href="schedule-lukhmanovskaya.html">Лухмановская</a>
+              </div>
+            </div>
             <a href="trainers.html">Тренеры</a>
           </nav>
         </div>
@@ -69,7 +87,9 @@
               <img src="assets/img/menu-icons.svg" alt="" />
             </div>
           </div>
-          <button class="btn menu-cta" type="button">Оставить заявку</button>
+          <button class="btn menu-cta" type="button" data-request-open>
+            Оставить заявку
+          </button>
         </div>
       </div>
 
@@ -306,6 +326,23 @@
         </div>
       </main>
 
+      <div class="request-modal" data-request-modal aria-hidden="true">
+        <div
+          class="request-modal__window"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="request-modal-title"
+        >
+          <button
+            class="request-modal__close"
+            type="button"
+            aria-label="Закрыть"
+            data-request-close
+          ></button>
+          <h2 id="request-modal-title">Заявка отправлена</h2>
+        </div>
+      </div>
+
       <footer class="site-footer">
         <div class="footer-left">
           <div class="footer-icons">
@@ -328,5 +365,6 @@
       </footer>
     </div>
     <script src="menu.js"></script>
+    <script src="trainers.js"></script>
   </body>
 </html>
