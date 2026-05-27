@@ -1047,6 +1047,14 @@ img {
   letter-spacing: -1.25px;
 }
 
+.footer-nav a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--yellow);
+}
+
 .footer-right {
   display: flex;
   flex-direction: column;
