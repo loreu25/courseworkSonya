@@ -417,6 +417,39 @@ img {
   text-transform: uppercase;
   letter-spacing: -1px;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-sub .btn {
+  width: 100%;
+  max-width: 500px;
+  align-self: flex-end;
+}
+
+.btn:hover,
+.slot-btn:hover,
+.request-submit:hover,
+.certificates-button:hover,
+.cert-submit:hover,
+.menu-cta:hover {
+  background: var(--yellow);
+  color: var(--dark);
+  border-color: var(--yellow);
+}
+
+.menu-links a:hover,
+.menu-link:hover,
+.menu-schedule a:hover,
+.header-nav a:hover,
+.header-schedule:hover,
+.header-schedule-panel a:hover,
+.faq-item button:hover,
+.day-tab:hover {
+  color: var(--yellow);
+}
+
+.day-tab:hover {
+  border-color: var(--yellow);
 }
 
 .facts {
@@ -844,7 +877,9 @@ img {
 }
 
 .cta-form .btn {
-  width: 309px;
+  width: 100%;
+  max-width: 420px;
+  align-self: flex-end;
 }
 
 .faq {
